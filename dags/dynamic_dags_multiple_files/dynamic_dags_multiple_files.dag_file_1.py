@@ -5,7 +5,7 @@ from datetime import datetime
 default_args = {"start_date": datetime(2021, 1, 1)}
 
 dag = DAG(
-    "dag_file_1",
+    "dynamic_dag_multiple_files.dag_file_1",
     schedule_interval="@daily",
     default_args=default_args,
 )

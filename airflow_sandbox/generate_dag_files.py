@@ -11,7 +11,9 @@ for filename in os.listdir(config_filepath):
     config = json.load(f)
 
     new_filename = (
-        "dags/dynamic_dags_multiple_files/" + config["DagId"] + ".py"
+        "dags/dynamic_dags_multiple_files/dynamic_dags_multiple_files."
+        + config["DagId"]
+        + ".py"
     )
 
     with open(dag_template_filename, "r") as template:
