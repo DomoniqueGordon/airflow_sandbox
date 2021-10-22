@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+	\.git
+| \.hg
+| \.mypy_cache
+| \.tox
+| \.venv
+| _build
+| buck-out
+| build   
+| venv
+)/ 
+'''
+
+[tool.poetry]
+name = "airflow_sandbox"
+version = "0.1.0"
+description = ""
+authors = ["Domonique Gordon"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+apache-airflow = "^2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+flake8 = "^4.0.1"
+pre-commit = "^2.15.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
