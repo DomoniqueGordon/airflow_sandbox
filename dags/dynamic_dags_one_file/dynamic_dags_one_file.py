@@ -42,7 +42,7 @@ def generate_dag(dag_id, start_date, schedule_interval, details):
 
 
 for table, details in tables.items():
-    dag_id = f"dag_{table}"
+    dag_id = f"dynamic_dag_one_file.{table}"
     globals()[dag_id] = generate_dag(
         dag_id, datetime(2021, 1, 1), details["schedule_interval"], details
     )
